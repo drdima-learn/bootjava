@@ -9,15 +9,11 @@ import ru.javaops.bootjava.repository.UserRepository;
 
 @SpringBootApplication
 @AllArgsConstructor
-public class RestaurantVotingApplication implements ApplicationRunner {
+public class RestaurantVotingApplication {
     private final UserRepository userRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(RestaurantVotingApplication.class, args);
     }
 
-    @Override
-    public void run(ApplicationArguments args) {
-        System.out.println(userRepository.findByLastNameContainingIgnoreCase("last"));
-    }
 }
