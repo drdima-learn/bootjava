@@ -16,6 +16,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Query("SELECT u FROM User u WHERE u.email = LOWER(:email)")
     Optional<User> findByEmailIgnoreCase(String email);
 
-    @RestResource(rel = "by-lastName", path = "by-lastName")
+    @RestResource(rel = "by-lastname", path = "by-lastname")
     List<User> findByLastNameContainingIgnoreCase(String lastName);
 }
